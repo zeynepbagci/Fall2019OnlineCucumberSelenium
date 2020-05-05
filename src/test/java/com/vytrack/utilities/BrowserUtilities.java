@@ -15,8 +15,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
-
-public class BrowserUtils {
+public class BrowserUtilities {
 
     /**
      * Pause test for some time
@@ -128,6 +127,4 @@ public class BrowserUtils {
             }
         }
     }
-
-
 }
