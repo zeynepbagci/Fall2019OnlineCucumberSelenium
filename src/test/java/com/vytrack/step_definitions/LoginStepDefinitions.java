@@ -58,5 +58,15 @@ public class LoginStepDefinitions {
         loginPage.login(string,string2);
     }
 
+    @When("user navigates to {string} and {string}")
+    public void user_navigates_to_and(String tab, String module) {
+        System.out.println("User clicks on the "+tab+" nad navigates to "+module);
+        loginPage.navigateTo(tab,module);
+
+    }
+
+
+
+
 
 }
