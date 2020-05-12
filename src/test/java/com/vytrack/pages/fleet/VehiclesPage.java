@@ -2,6 +2,7 @@ package com.vytrack.pages.fleet;
 
 import com.vytrack.pages.AbstractPageBase;
 import com.vytrack.utilities.BrowserUtilities;
+import com.vytrack.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -29,6 +30,16 @@ public class VehiclesPage extends AbstractPageBase {
 
     @FindBy(xpath = "(//button[@type='submit'])[1]")
     private WebElement submit;
+
+    @FindBy(css = "[class='btn-group pull-right'] > button")
+    protected WebElement saveAndClose;
+
+
+    public void clickOnSaveAndClose() {
+        BrowserUtilities.wait(3);
+        wait.until(ExpectedConditions.elementToBeClickable(saveAndClose)).click();
+        waitForLoaderMask();
+    }
 
     public void setLicencePlateInput(String licencePlate) {
         BrowserUtilities.waitForPageToLoad(20);
@@ -68,5 +79,6 @@ public class VehiclesPage extends AbstractPageBase {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
         return driver.findElement(By.xpath(xpath)).getText().trim();
     }
+
 
 }
