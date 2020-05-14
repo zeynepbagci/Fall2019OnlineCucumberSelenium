@@ -17,7 +17,7 @@ public class LoginStepDefinitions {
     public void user_is_on_the_login_page() {
         System.out.println("Open login page");
         // -Denv=qa1, -Denv=qa2, -Denv=qa3
-        String env = "qa2";
+        String env = "qa1";
         if (System.getProperty("env") != null) {
             env = System.getProperty("env");
         }

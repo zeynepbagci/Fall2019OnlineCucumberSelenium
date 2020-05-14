@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         dryRun = false,
         strict = false,
-        tags = "@scenario_outline2",
+        tags = " @create_car_DDT",
         plugin ={ "html:target/default-report",
                   "json:target/cucumber.json"
         }

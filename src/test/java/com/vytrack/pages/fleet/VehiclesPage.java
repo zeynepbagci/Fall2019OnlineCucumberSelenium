@@ -76,7 +76,9 @@ public class VehiclesPage extends AbstractPageBase {
 
     public String getCarGeneralInfo(String parameter) {
         String xpath = "//label[text()='" + parameter + "']/following-sibling::div/div";
+        BrowserUtilities.wait(20);
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
+        BrowserUtilities.wait(20);
         return driver.findElement(By.xpath(xpath)).getText().trim();
     }
 
